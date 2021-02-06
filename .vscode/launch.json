@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${file}",
+            "program": "/home/emerson/Development/DevelopmentEnvironments/GolangDev/learning-projects/product-finder/cmd/main.go",
             "env": {
                 "API_KEY_ZEN_SERP": "55c9d9e0-6287-11eb-a255-7b80b622348a",
                 "API_KEY_SERP_STACK": "35cb4329abb8f8c5027decb08f6e8074",
@@ -17,7 +17,17 @@
                 "HOST": "LOCALHOST",
                 "API_BASE_URL": "/api",
                 "ENV": "DEV",
-                "SECRET": "$%%SDFDSA"
+                "SECRET": "$%%SDFDSA",
+                "PRIVATE_KEY_PATH": "../.keys/app.rsa",
+                "PUBLIC_KEY_PATH": "../.keys/app.rsa.pub",
+                "DB_TYPE": "postgres",
+                "DB_HOST": "localhost",
+                "DB_PORT": "5432",
+                "DB_USER": "postgres",
+                "DB_PASSWORD": "mypass",
+                "DB_DB": "productfinder",
+                "DB_SCHEMA": "IDENTITY",
+                "DB_DIALECT": "postgres"
             }
         },
         {
@@ -32,7 +42,14 @@
             "args": [],
             "env": {
                 "API_KEY_ZEN_SERP": "55c9d9e0-6287-11eb-a255-7b80b622348a",
-                "API_KEY_SERP_STACK": "35cb4329abb8f8c5027decb08f6e8074"
+                "API_KEY_SERP_STACK": "35cb4329abb8f8c5027decb08f6e8074",
+                "PORT": "8083",
+                "HOST": "LOCALHOST",
+                "API_BASE_URL": "/api",
+                "ENV": "DEV",
+                "SECRET": "$%%SDFDSA",
+                "PRIVATE_KEY_PATH": "./.keys/app.rsa",
+                "PUBLIC_KEY_PATH": "./.keys/app.rsa.pub"
             }
         }
     ]

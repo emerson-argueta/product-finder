@@ -39,8 +39,10 @@ type PaymentGateway struct {
 
 // Authorization contains configuration variables for the auth client.
 type Authorization struct {
-	APIKey string
-	Secret string
+	APIKey         string
+	Secret         string
+	PrivateKeyPath string
+	PublicKeyPath  string
 }
 
 func newConfig() *Config {
@@ -65,8 +67,10 @@ func newConfig() *Config {
 		APIKey: env.Get("PAYMENT_GATEWAY_API_KEY"),
 	}
 	authorization := &Authorization{
-		APIKey: env.Get("AUTH_API_KEY"),
-		Secret: env.Get("SECRET"),
+		APIKey:         env.Get("AUTH_API_KEY"),
+		Secret:         env.Get("SECRET"),
+		PrivateKeyPath: env.Get("PRIVATE_KEY_PATH"),
+		PublicKeyPath:  env.Get("PUBLIC_KEY_PATH"),
 	}
 
 	return &Config{

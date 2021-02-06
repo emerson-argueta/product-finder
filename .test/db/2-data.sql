@@ -1,0 +1,9 @@
+-- password is password
+DELETE FROM IDENTITY.USER;
+INSERT INTO IDENTITY.USER(ID,EMAIL,HASHPASSWORD) 
+values
+(
+    'f7599588-b899-4237-9f49-65f7cc14bdf4',
+    'test0@test.com',
+    '$2a$10$o4OS7VZwSxf8qsjg5/JmCeAgLHD/KtnY5/YX4U4tRZ77tq3TNN7FG'
+) RETURNING ID;

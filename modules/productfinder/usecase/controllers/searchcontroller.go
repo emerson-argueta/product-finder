@@ -18,11 +18,11 @@ var _ Controller = &searchController{}
 type searchController struct {
 	Usecase       *usecase.SearchUsecase
 	Logger        *log.Logger
-	Authorization *authorization.Client
+	Authorization authorization.JwtService
 }
 
 // NewSearchController for search usecase
-func NewSearchController(productFinderRepo *webscraper.Service, logger *log.Logger, authorizationService *authorization.Client) Controller {
+func NewSearchController(productFinderRepo *webscraper.Service, logger *log.Logger, authorizationService authorization.JwtService) Controller {
 	searchUsecase := usecase.NewSearchUsecase(&productFinderRepo.Search, authorizationService)
 
 	ctrl := &searchController{

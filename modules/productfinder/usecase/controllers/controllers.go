@@ -20,7 +20,7 @@ type Controllers struct {
 
 // New controller holds all necessary controllers
 func New(
-	authorizationService *authorization.Client,
+	authorizationService authorization.JwtService,
 	logger *log.Logger,
 ) *Controllers {
 	controllers := &Controllers{}

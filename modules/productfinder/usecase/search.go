@@ -9,13 +9,13 @@ import (
 // SearchUsecase performs registering
 type SearchUsecase struct {
 	SearchRepo           repository.SearchRepo
-	AuthorizationService *authorization.Client
+	AuthorizationService authorization.JwtService
 }
 
 // NewSearchUsecase to register user
 func NewSearchUsecase(
 	searchRepo repository.SearchRepo,
-	authorizationService *authorization.Client,
+	authorizationService authorization.JwtService,
 ) *SearchUsecase {
 	return &SearchUsecase{
 		SearchRepo:           searchRepo,
